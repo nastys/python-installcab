@@ -24,7 +24,7 @@ python installcab.py [options] cabfile filter [wineprefix_path]
 -  --noreg: do not import registry entries
 -  --nodll: do not install dlls into system dir
 -  --register: register dlls with regsrv32
--  --stripdllpath: strip full path for dlls in registry so wine can find them through it's own resolver
+-  --stripdllpath: strip full path for dlls in registry so wine can find them through its own resolver
    
 ## Examples
 
