@@ -1,4 +1,5 @@
 #! /bin/bash
+if [[ $1 != *windows6.1-KB976932-X??.exe ]]; then echo "Usage: $0 windows6.1-KB976932-X??.exe"; exit; fi
 DIRECTORY=`dirname $(realpath $0)`
 $DIRECTORY/installcab.py "$1" mediafoundation
 $DIRECTORY/installcab.py "$1" mf_
