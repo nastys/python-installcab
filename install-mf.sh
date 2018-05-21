@@ -5,8 +5,5 @@ $DIRECTORY/installcab.py "$1" mf_
 $DIRECTORY/installcab.py "$1" mfreadwrite
 $DIRECTORY/installcab.py "$1" wmadmod
 $DIRECTORY/installcab.py "$1" wmvdecod
-
-# too bad that installer doesnt have mfplat.dll ...
-echo ""
-echo "Done!"
-echo "Now you need to get mfplat.dll version 12.0.7601.23471 from elsewhere and place it in your application directory"
+if [[ $1 == *x64* ]]; then windir=syswow64; else windir=system32; fi
+wget "http://www.telecharger-dll.fr/dll/m/mfplat.dll" -O"$WINEPREFIX/drive_c/windows/$windir/mfplat.dll"
